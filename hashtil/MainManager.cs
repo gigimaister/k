@@ -27,10 +27,9 @@ namespace hashtil
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            
+
             base.OnCreate(savedInstanceState);
 
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjU4OTI4QDMxMzgyZTMxMmUzMGF2QlJkQ05idmFYQStpeUxNb2k5ejRKc1pCdFF1cnhocjM4aTU2S2JRSFE9");
 
             SetContentView(Resource.Layout.main_manager);
 
@@ -123,11 +122,19 @@ namespace hashtil
 
         public override void OnBackPressed()
         {
+
             if (UserLevel == "2")
             {
                 Intent intent = new Intent(this, typeof(MainActivity));
                 intent.PutExtra("User", User.Text.Trim());
                 intent.PutExtra("UserLevel", "2");
+                this.StartActivity(intent);
+            }
+            if (UserLevel == "4")
+            {
+                Intent intent = new Intent(this, typeof(DriversMain));
+                intent.PutExtra("User", User.Text.Trim());
+                intent.PutExtra("UserLevel", "4");
                 this.StartActivity(intent);
             }
             else

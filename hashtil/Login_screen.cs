@@ -156,6 +156,63 @@ namespace hashtil
                             this.StartActivity(drivers_scan);
 
                             break;
+
+                        case "4":
+
+                            Txt.Text = "מתחבר...";
+                            Intent drivers_manager = new Intent(this, typeof(DriversMain));
+                            drivers_manager.PutExtra("User", User.Text.Trim());
+                            ISharedPreferences pref_drivers_manager = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                            ISharedPreferencesEditor edit_drivers_manager = pref_drivers_manager.Edit();
+                            edit_drivers_manager.PutString("UserLevel", "4");
+                            edit_drivers_manager.Apply();
+                            //mainmngr.PutExtra("UserLevel","2");
+
+                            this.StartActivity(drivers_manager);
+
+                            break;
+                        case "5":
+
+                            Txt.Text = "מתחבר...";
+                            Intent contract_1 = new Intent(this, typeof(DriversMain));
+                            contract_1.PutExtra("User", User.Text.Trim());
+                            ISharedPreferences pref_contract_1 = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                            ISharedPreferencesEditor edit_contract_1 = pref_contract_1.Edit();
+                            edit_contract_1.PutString("UserLevel", "5");
+                            edit_contract_1.Apply();
+                            //mainmngr.PutExtra("UserLevel","2");
+
+                            this.StartActivity(contract_1);
+
+                            break;
+                        case "6":
+
+                            Txt.Text = "מתחבר...";
+                            Intent contract_2 = new Intent(this, typeof(DriversMain));
+                            contract_2.PutExtra("User", User.Text.Trim());
+                            ISharedPreferences pref_contract_2 = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                            ISharedPreferencesEditor edit_contract_2 = pref_contract_2.Edit();
+                            edit_contract_2.PutString("UserLevel", "6");
+                            edit_contract_2.Apply();
+                            //mainmngr.PutExtra("UserLevel","2");
+
+                            this.StartActivity(contract_2);
+
+                            break;
+                        case "7":
+
+                            Txt.Text = "מתחבר...";
+                            Intent contract_3 = new Intent(this, typeof(DriversMain));
+                            contract_3.PutExtra("User", User.Text.Trim());
+                            ISharedPreferences pref_contract_3 = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                            ISharedPreferencesEditor edit_contract_3 = pref_contract_3.Edit();
+                            edit_contract_3.PutString("UserLevel", "7");
+                            edit_contract_3.Apply();
+                            //mainmngr.PutExtra("UserLevel","2");
+
+                            this.StartActivity(contract_3);
+
+                            break;
                         default:
 
                             Txt.Text = "שם משתמש ו/או סיסמה לא נכונים!";
@@ -166,7 +223,7 @@ namespace hashtil
 
                 }
 
-                catch (System.Reflection.TargetInvocationException )
+                catch (System.Reflection.TargetInvocationException)
                 {
                     Txt.Text = "בעית תקשורת...נא לנסות שוב";
                     progressBar.Visibility = ViewStates.Invisible;

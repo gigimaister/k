@@ -46,8 +46,8 @@ namespace hashtil
             product_typeColumn.MappingName = "Passport";
             //product_typeColumn.Width = 60;
 
-           //GridTextColumn gidul_column = new GridTextColumn();
-           // product_typeColumn.MappingName = "Gidul";
+            //GridTextColumn gidul_column = new GridTextColumn();
+            // product_typeColumn.MappingName = "Gidul";
             //product_typeColumn.Width = 60;
 
             GridTextColumn zancolumn = new GridTextColumn();

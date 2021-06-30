@@ -13,11 +13,15 @@ namespace hashtil
     {
         private Button Back;
         Android.App.ProgressDialog progress;
-        string User;
+        string User, UserLevel;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.after_scan_error);
+
+            ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+            UserLevel = pref.GetString("UserLevel", string.Empty);
 
             progress = new Android.App.ProgressDialog(this);
             progress.Indeterminate = true;
@@ -42,11 +46,22 @@ namespace hashtil
         }
         private void Back_Click(object sender, EventArgs e)
         {
+
             progress.Show();
-            Intent intent = new Intent(this, typeof(MainActivity));
-            intent.PutExtra("User", User);
-            this.StartActivity(intent);
-            progress.Hide();
+            if (UserLevel == "3" || UserLevel == "4")
+            {
+                Intent drivers_main = new Intent(this, typeof(DriversMain));
+                drivers_main.PutExtra("User", User);
+                this.StartActivity(drivers_main);
+                progress.Hide();
+            }
+            else
+            {
+                Intent intent = new Intent(this, typeof(MainActivity));
+                intent.PutExtra("User", User);
+                this.StartActivity(intent);
+                progress.Hide();
+            }
         }
 
         public override void OnBackPressed() { }

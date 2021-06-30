@@ -34,7 +34,7 @@ namespace hashtil
         protected override void OnCreate(Bundle bundle)
         {
             UserName = Intent.GetStringExtra("User") ?? "";
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTk4NTE0QDMxMzcyZTM0MmUzME1tZFFQek1JUUpwWHJDU2JjR3Q5eTErRk1SWmxCNVRMeGJVL052UmNkVjQ9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzQ3MTcxQDMxMzgyZTMzMmUzMFFKaE1kT3ZaczFPYUFYTDByT1NTSTBPb01MMmFLTC94a2ZrZG1GOGdha0E9");
             dataGrid = new SfDataGrid(this);
             layout = new LinearLayout(this);
             layout.Orientation = Orientation.Vertical;
@@ -50,22 +50,27 @@ namespace hashtil
 
             GridTextColumn idColumn = new GridTextColumn();
             idColumn.MappingName = "Date";
+            idColumn.HeaderText = "תאריך";
             idColumn.Width = 100;
 
             GridTextColumn brandColumn = new GridTextColumn();
             brandColumn.MappingName = "User";
+            brandColumn.HeaderText = "משתמש";
             brandColumn.Width = 80;
 
             GridTextColumn product_typeColumn = new GridTextColumn();
             product_typeColumn.MappingName = "Passport";
+            product_typeColumn.HeaderText = "פספורט";
             product_typeColumn.Width = 100;
 
             GridTextColumn priceColumn = new GridTextColumn();
             priceColumn.MappingName = "Hamama";
+            priceColumn.HeaderText = "חממה";
             priceColumn.Width = 80;
 
             GridTextColumn gamlon = new GridTextColumn();
             gamlon.MappingName = "Gamlon";
+            gamlon.HeaderText = "גמלון";
             gamlon.Width = 80;
 
             dataGrid.Columns.Add(idColumn);

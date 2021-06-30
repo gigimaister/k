@@ -10,9 +10,7 @@ using Newtonsoft.Json;
 using Refit;
 using SfGrid_Android;
 using Syncfusion.SfDataGrid;
-using System;
 using System.Collections.ObjectModel;
-using System.Net;
 using Orientation = Android.Widget.Orientation;
 
 namespace hashtil
@@ -74,7 +72,7 @@ namespace hashtil
             dataGrid.Columns.Add(timecolumn);
             dataGrid.Columns.Add(brandColumn);
             dataGrid.Columns.Add(product_typeColumn);
-            dataGrid.Columns.Add(zancolumn);     
+            dataGrid.Columns.Add(zancolumn);
             dataGrid.Columns.Add(priceColumn);
             dataGrid.Columns.Add(gamlon);
             dataGrid.Columns.Add(magash);
@@ -122,8 +120,8 @@ namespace hashtil
 
             getData();
             SetContentView(layout);
-        
-    }
+
+        }
 
         protected override void AttachBaseContext(Context @base)
         {

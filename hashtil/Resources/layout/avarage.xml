@@ -58,11 +58,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView2"
-        android:layout_alignParentRight="true"       
+        android:layout_alignParentRight="true"
         android:layout_marginRight="15dip"
         android:layout_marginTop="150dp"
         android:text="שלח"
-        android:backgroundTint="#ff18c025"
+        android:backgroundTint="#ff00c853"
         android:textStyle="bold" />
     <Button
         android:id="@+id/back"

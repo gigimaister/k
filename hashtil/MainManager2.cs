@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.Content.Res;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using System;
 
 namespace hashtil
 {
@@ -24,7 +19,7 @@ namespace hashtil
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.mainmanager2);
-            progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);       
+            progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
             BtnAudit = FindViewById<Button>(Resource.Id.button1);
             BtnDestroyed = FindViewById<Button>(Resource.Id.button2);
             progressBar.Visibility = ViewStates.Invisible;
@@ -45,11 +40,11 @@ namespace hashtil
 
         public override void OnBackPressed()
         {
-            
-                Intent intent = new Intent(this, typeof(MainManager));
-                intent.PutExtra("User", UserName);               
-                this.StartActivity(intent);           
-         
+
+            Intent intent = new Intent(this, typeof(MainManager));
+            intent.PutExtra("User", UserName);
+            this.StartActivity(intent);
+
         }
         protected override void AttachBaseContext(Context @base)
         {

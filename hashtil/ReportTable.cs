@@ -78,18 +78,22 @@ namespace hashtil
 
             GridTextColumn idColumn = new GridTextColumn();
             idColumn.MappingName = "Date";
+            idColumn.HeaderText = "תאריך";
             //idColumn.Width = 70;
 
             GridTextColumn brandColumn = new GridTextColumn();
             brandColumn.MappingName = "Time";
+            brandColumn.HeaderText = "משתמש";
             //brandColumn.Width = 60;
 
             GridTextColumn product_typeColumn = new GridTextColumn();
             product_typeColumn.MappingName = "User";
+            product_typeColumn.HeaderText = "משתמש";
             //product_typeColumn.Width = 65;
 
             GridTextColumn priceColumn = new GridTextColumn();
             priceColumn.MappingName = "Message";
+            priceColumn.HeaderText = "פרטים";
             priceColumn.Width = 180;
 
 

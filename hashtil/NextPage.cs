@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Net;
-using System.Text;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.Content.Res;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using System;
+using System.Collections.Specialized;
+using System.Net;
+using System.Text;
 
 namespace hashtil
 {
     [Activity(Theme = "@style/Theme.AppCompat.DayNight.NoActionBar")]
     public class NextPage : AppCompatActivity
     {
-        
+
         private Button Btndestroyed;
         private ProgressBar progressBar;
         string usrname, ScanResult;
@@ -35,7 +31,7 @@ namespace hashtil
 
             progressBar.Visibility = ViewStates.Invisible;
 
-            Btndestroyed.Click += Send_Destroyed;               
+            Btndestroyed.Click += Send_Destroyed;
 
             // Create your application here
         }

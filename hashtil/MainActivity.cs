@@ -32,13 +32,13 @@ namespace hashtil
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            
+
 
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
-            
+
             // Set our view from the "main" layout resour
             MobileBarcodeScanner.Initialize(Application);
 
@@ -100,7 +100,7 @@ namespace hashtil
             base.AttachBaseContext(config);
         }
 
-        private void HandleScanResult(ZXing.Result result)
+        virtual public void HandleScanResult(ZXing.Result result)
         {
 
             if (result != null && !string.IsNullOrEmpty(result.Text))

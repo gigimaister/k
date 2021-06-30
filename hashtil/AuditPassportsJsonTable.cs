@@ -8,14 +8,14 @@ namespace hashtil
     class AuditPassportsJsonTable : ReportTbleInfo, INotifyPropertyChanged
     {
 
-        
+
         private string status;
         private string remarks;
         private string time;
-       
 
 
-        
+
+
 
         [JsonProperty("Time")]
         public string Time
@@ -31,7 +31,7 @@ namespace hashtil
             }
         }
 
-        
+
 
         [JsonProperty("Status")]
         public string Status
@@ -64,7 +64,7 @@ namespace hashtil
 
 
         }
-        public event PropertyChangedEventHandler  PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
         private void RaisePropertyChanged(String Name)
         {
             if (PropertyChanged != null)

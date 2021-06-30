@@ -31,7 +31,7 @@ namespace hashtil
         int[] gamlon_hahama4 = new int[23] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 };
         int[] gamlon_hahama5 = new int[18] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
         int[] gamlon_hahama6 = new int[27] { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 };
-        int[] gamlon_hahama7 = new int[32] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 };
+        int[] gamlon_hahama7 = new int[32] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -115,59 +115,59 @@ namespace hashtil
 
 
 
-        Btnplus.Click += delegate
-            {
-                try
+            Btnplus.Click += delegate
                 {
-
-
-
-                    greenhouse++;
-
-                    if (greenhouse > 7)
+                    try
                     {
-                        greenhouse = 1;
+
+
+
+                        greenhouse++;
+
+                        if (greenhouse > 7)
+                        {
+                            greenhouse = 1;
+
+                        }
+                        hamama.Text = greenhouse.ToString();
+                        switch (greenhouse)
+                        {
+                            case 1:
+                                hamama_picker = gamlon_hahama1;
+                                break;
+                            case 2:
+                                hamama_picker = gamlon_hahama2;
+                                break;
+                            case 3:
+                                hamama_picker = gamlon_hahama3;
+                                break;
+                            case 4:
+                                hamama_picker = gamlon_hahama4;
+                                break;
+                            case 5:
+                                hamama_picker = gamlon_hahama5;
+                                break;
+                            case 6:
+                                hamama_picker = gamlon_hahama6;
+                                break;
+                            case 7:
+                                hamama_picker = gamlon_hahama7;
+                                break;
+
+                            default:
+
+                                break;
+
+                        }
+                        gamlon.Text = hamama_picker[i].ToString();
 
                     }
-                    hamama.Text = greenhouse.ToString();
-                    switch (greenhouse)
+                    catch (SystemException)
                     {
-                        case 1:
-                            hamama_picker = gamlon_hahama1;
-                            break;
-                        case 2:
-                            hamama_picker = gamlon_hahama2;
-                            break;
-                        case 3:
-                            hamama_picker = gamlon_hahama3;
-                            break;
-                        case 4:
-                            hamama_picker = gamlon_hahama4;
-                            break;
-                        case 5:
-                            hamama_picker = gamlon_hahama5;
-                            break;
-                        case 6:
-                            hamama_picker = gamlon_hahama6;
-                            break;
-                        case 7:
-                            hamama_picker = gamlon_hahama7;
-                            break;
-
-                        default:
-
-                            break;
-
+                        i = 0;
+                        gamlon.Text = hamama_picker[i].ToString();
                     }
-                    gamlon.Text = hamama_picker[i].ToString();
-
-                }
-                catch (SystemException)
-                {
-                    i = 0;
-                    gamlon.Text = hamama_picker[i].ToString();
-                }
-            };
+                };
 
             Btnmuinus.Click += delegate
             {

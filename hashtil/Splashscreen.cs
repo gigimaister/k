@@ -23,6 +23,7 @@ namespace hashtil
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzQ3MTY2QDMxMzgyZTMzMmUzMFFKaE1kT3ZaczFPYUFYTDByT1NTSTBPb01MMmFLTC94a2ZrZG1GOGdha0E9");
             Log.Debug(TAG, "SplashActivity.OnCreate");
 
             pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
@@ -103,6 +104,73 @@ namespace hashtil
                         yo.PutString("UserLevel", "2");
                         yo.Apply();
                         this.StartActivity(mainmngr);
+
+                        break;
+
+                    case 3:
+
+
+                        Intent driver = new Intent(this, typeof(DriversMain));
+                        driver.PutExtra("User", usr);
+                        ISharedPreferences dr = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                        ISharedPreferencesEditor drv = dr.Edit();
+                        drv.PutString("UserLevel", "3");
+                        drv.Apply();
+                        this.StartActivity(driver);
+
+                        break;
+                    case 4:
+
+
+                        Intent manager_driver = new Intent(this, typeof(DriversMain));
+                        manager_driver.PutExtra("User", usr);
+                        ISharedPreferences drv_mng = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                        ISharedPreferencesEditor drv_mng_2 = drv_mng.Edit();
+                        drv_mng_2.PutString("UserLevel", "4");
+                        drv_mng_2.Apply();
+                        this.StartActivity(manager_driver);
+
+                        break;
+                    case 5:
+
+                       
+                        Intent contract_1 = new Intent(this, typeof(DriversMain));
+                        contract_1.PutExtra("User", usr);
+                        ISharedPreferences pref_contract_1 = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                        ISharedPreferencesEditor edit_contract_1 = pref_contract_1.Edit();
+                        edit_contract_1.PutString("UserLevel", "5");
+                        edit_contract_1.Apply();
+                        //mainmngr.PutExtra("UserLevel","2");
+
+                        this.StartActivity(contract_1);
+
+                        break;
+                    case 6:
+
+                       
+                        Intent contract_2 = new Intent(this, typeof(DriversMain));
+                        contract_2.PutExtra("User", usr);
+                        ISharedPreferences pref_contract_2 = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                        ISharedPreferencesEditor edit_contract_2 = pref_contract_2.Edit();
+                        edit_contract_2.PutString("UserLevel", "6");
+                        edit_contract_2.Apply();
+                        //mainmngr.PutExtra("UserLevel","2");
+
+                        this.StartActivity(contract_2);
+
+                        break;
+                    case 7:
+
+                        
+                        Intent contract_3 = new Intent(this, typeof(DriversMain));
+                        contract_3.PutExtra("User", usr);
+                        ISharedPreferences pref_contract_3 = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                        ISharedPreferencesEditor edit_contract_3 = pref_contract_3.Edit();
+                        edit_contract_3.PutString("UserLevel", "7");
+                        edit_contract_3.Apply();
+                        //mainmngr.PutExtra("UserLevel","2");
+
+                        this.StartActivity(contract_3);
 
                         break;
 

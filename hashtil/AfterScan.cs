@@ -17,7 +17,7 @@ namespace hashtil
     {
 
         static string btn_id;
-        private Button btnready, btnproblem, btnmoving_new, btnmoving_inside, btnaudit_pass,Btnpage2;
+        private Button btnready, btnproblem, btnmoving_new, btnmoving_inside, btnaudit_pass, Btnpage2;
         string ScanResult, usrname, ScanName;
         private string Dbmessage, PDbmessage;
         private TextView scantxt;

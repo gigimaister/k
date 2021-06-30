@@ -16,13 +16,16 @@
         android:layout_marginTop="15dp" />
     <TextView
         android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="292.0dp"
+        android:layout_height="44.5dp"
         android:id="@+id/cx_scan_text"
         android:layout_below="@id/imageView1"
         android:textColor="#ffffffff"
-        android:textStyle="bold" />
-    
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp" />
+
 
     <ImageButton
         android:src="@drawable/unloading_truck"
@@ -33,7 +36,7 @@
         android:layout_centerInParent="true"
         android:layout_centerVertical="false"
         tools:ignore="UnresolvedResource"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" 
         />
     <TextView
         android:text="פריקה"
@@ -49,8 +52,6 @@
         />
     <ImageButton
         android:src="@drawable/cage_collect_forklift"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_below="@id/unload_text"
         android:id="@+id/loadingtruck"
         android:layout_width="165dp"
@@ -71,5 +72,13 @@
         android:layout_centerInParent="true"
         android:textStyle="bold" 
         />
+     <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar1"
+        android:background="@drawable/progressbarstyle"
+        android:indeterminate="true"
+        android:layout_marginTop="1dp" 
+        android:layout_below="@id/collect_cage_text"/>
 
 </RelativeLayout>
